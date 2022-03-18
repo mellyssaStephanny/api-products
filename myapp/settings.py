@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'catalog',
     'rest_framework',
+    'django_elasticsearch_dsl',
 
 ]
 
@@ -140,3 +141,9 @@ CACHES = {
 
 # Cache time to live is 15 minutes.
 CACHE_TTL = 60 * 15
+
+ELASTICSEARCH_DSL={
+    'default': {
+        'hosts': 'localhost:9200'
+    },
+}
